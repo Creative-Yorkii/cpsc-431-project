@@ -1,49 +1,48 @@
 {
-  "name": "react-chat-app",
-  "version": "1.0.0",
-  "description": "react blog",
-  "main": "index.js",
-  "engine": {
-    "node": "12.18.3",
-    "npm": "6.14.6"
-  },
-  "scripts": {
-    "start": "node server/index.js",
-    "backend": "nodemon server/index.js",
-    "frontend": "npm run front --prefix client",
-    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-  },
-  "author": "Anthony Goossens",
-  "license": "ISC",
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "antd": "^2.0.1",
+    "antd": "^3.24.1",
     "axios": "^0.21.1",
-    "babel-jest": "^24.9.0",
-    "bcrypt": "^3.0.8",
-    "body-parser": "^1.18.3",
-    "cookie-parser": "^1.4.3",
-    "eslint": "^6.6.0",
-    "express": "^4.17.1",
-    "formik": "^2.2.6",
-    "jest": "^24.9.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "formik": "^1.5.8",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-dropzone": "^10.2.1",
+    "react-icons": "^3.7.0",
     "react-redux": "^7.1.0-rc.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3",
-    "redux": "^4.0.5",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.4.1",
+    "redux": "^4.0.0",
+    "redux-form": "^8.2.6",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
-    "socket.io": "^2.4.1",
-    "webpack": "^4.42.0",
-    "webpack-dev-server": "^3.10.3",
-    "yup": "^0.32.9"
+    "socket.io-client": "^2.2.0",
+    "yup": "^0.27.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "concurrently": "^4.1.0",
-    "nodemon": "^1.19.1"
+    "http-proxy-middleware": "^0.19.1"
   }
 }
